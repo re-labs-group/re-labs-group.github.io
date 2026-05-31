@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RECOL 26 Language Standard</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 60px;
+    color: #111;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin-top: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+code {
+    background: #f4f4f4;
+    padding: 10px;
+    display: block;
+    white-space: pre;
+    border-left: 4px solid #333;
+}
+
+.note {
+    color: #555;
+    font-style: italic;
+}
+
+.keyword {
+    font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>RECOL 26</h1>
+<h3>Readable Computing Language</h3>
+<p><b>Language Standard (Draft)</b></p>
+
+<hr>
+
+<h2>1. Comments</h2>
+<p>Comments are written using double slashes:</p>
+
+<code>
+// This is a comment
+</code>
+
+<h2>2. Variables</h2>
+
+<p>All variables in RECOL 26 must start with the <b>$</b> symbol and must be declared before use.</p>
+
+<p>First, a variable must have a data type:</p>
+
+<code>
+$variable1 :: string;
+</code>
+
+<p>Then a value can be assigned:</p>
+
+<code>
+$variable1 := "hello";
+</code>
+
+<h3>Data Types</h3>
+
+<code>
+string
+int
+bool
+char
+</code>
+
+<h2>Example</h2>
+
+<code>
+$var1 :: int;
+$var1 := 67;
+
+$var2 :: int;
+$var2 := 50;
+
+$sum :: int;
+$sum := $var1 + $var2;
+</code>
+
+<h2>3. Output</h2>
+
+<p>All data must be stored in variables before output.</p>
+
+<code>
+$string1 :: string;
+$string1 := "I am sigma";
+display($string1);
+</code>
+
+<p class="note">Direct output of literals is not allowed:</p>
+
+<code>
+display("hello");  // NOT ALLOWED
+</code>
+
+<h2>4. Input</h2>
+
+<code>
+$input1 :: string;
+accept($input1);
+</code>
+
+<h2>5. Program Structure</h2>
+
+<code>
+program-info MY_FIRST_PROGRAM
+
+SECTION VARIABLES
+
+$var1 :: int;
+$var2 :: string;
+
+begin
+
+end
+</code>
+
+</body>
+</html>
